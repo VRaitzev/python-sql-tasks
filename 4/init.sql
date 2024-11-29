@@ -1,9 +1,9 @@
-CREATE TABLE customers (
+CREATE TABLE  IF NOT EXISTS customers (
     customer_id SERIAL PRIMARY KEY,
     customer_name VARCHAR(100) NOT NULL
 );
 
-CREATE TABLE orders (
+CREATE TABLE  IF NOT EXISTS orders (
     order_id SERIAL PRIMARY KEY,
     customer_id INTEGER REFERENCES customers(customer_id),
     order_date DATE NOT NULL,
